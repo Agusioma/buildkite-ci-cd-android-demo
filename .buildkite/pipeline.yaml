@@ -1,12 +1,10 @@
 steps:  
   - label: "Creating our autologout functionality test app! :smile:"  
     command: "./gradlew assembleDebug"
-    artifact_paths: "AutoLogout.apk"
+    artifact_paths: "app/build/outputs/apk/debug/*.apk"
 
   - label: "Debug variant tests 📏"  
     command:  
       - './gradlew testDebugUnitTest'  
-      - 'tar -zcvf our-test-results.tar.gz app/build/reports/tests/testDebugUnitTest'
     artifact_paths:  
-      - "app/build/reports/tests/testDebugUnitTest/our-test-results.tar.gz"
-      - "app/build/reports/tests/testDebugUnitTest/index.html"
+      - "app/build/reports/tests/testDebugUnitTest/tests.html"
