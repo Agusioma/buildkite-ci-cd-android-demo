@@ -1,0 +1,4 @@
+steps:  
+  - label: "Creating our autologout functionality test app! :smile:"  
+    command: "./gradlew assembleDebug"
+    artifact_paths: "app/build/outputs/apk/debug/*.apk"
